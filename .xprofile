@@ -1,0 +1,6 @@
+# Will run whenever the x server starts from a display(login) manager like i3, not from the tty
+
+# set wallpaper
+#/home/aldrin/.scripts/proverbbg.sh
+#/usr/bin/dunst
+
