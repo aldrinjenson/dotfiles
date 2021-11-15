@@ -185,7 +185,7 @@ _Pacdiff() {
 ################################################################################
 
 
-# My bash customisations!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################## Custom ##################################
 
 PS1="\[\e[31m\]\W\[\033[32m\] \$: " # colors for bash info at the beginning
 shopt -s autocd # Allows you to cd into a directory by just entering it's name
@@ -205,7 +205,6 @@ bind -x '"\C-l": clear;'
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
 export ANDROID_HOME=/home/aldrin/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-# export REACT_EDITOR=vscode
 export REACT_EDITOR=vscodium
 export HISTFILESIZE=1000
 
@@ -224,7 +223,7 @@ export NNN_BMS='c:~/Code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
 export NNN_PLUG='f:finder;d:-drag.sh;x:!chmod +x;g:!git log;w:-wall.sh'
-#export NEXT_TELEMETRY_DISABLED=1
+export NEXT_TELEMETRY_DISABLED=1
 
 #alias ls='ls --color=auto -F'
 alias l='ls --color=auto -F'
@@ -236,11 +235,10 @@ alias p="sudo pacman"
 alias ashare='/home/aldrin/personal/scripts/pashare.sh start'
 alias bashrc='vim ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
-#alias scpy='scrcpy -S -w'
+alias scpy='scrcpy -S -w'
 #alias scim='sc-im'
 alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
 alias ccat='highlight -O ansi --force'  # alternative to cat with highlight
-alias ec2='ssh -i ~/personal/simpleMusicServer.pem ubuntu@ec2-13-127-207-244.ap-south-1.compute.amazonaws.com'
 alias ggpush='git push'
 alias ggpull='git pull'
 alias n='nnn -e'
