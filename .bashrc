@@ -215,7 +215,7 @@ xevf(){
 
 # tabtab source for packages
 # uninstall by removing these lines
-[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
+#[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
 
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
@@ -223,6 +223,9 @@ HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && 
 export NNN_BMS='c:~/Code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
+export NNN_PLUG='f:finder;d:-drag.sh;x:!chmod +x;g:!git log;w:-wall.sh'
+#export NEXT_TELEMETRY_DISABLED=1
+
 #alias ls='ls --color=auto -F'
 alias l='ls --color=auto -F'
 alias t="tldr"
@@ -239,6 +242,7 @@ alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
 alias ccat='highlight -O ansi --force'  # alternative to cat with highlight
 alias ec2='ssh -i ~/personal/simpleMusicServer.pem ubuntu@ec2-13-127-207-244.ap-south-1.compute.amazonaws.com'
 alias ggpush='git push'
+alias ggpull='git pull'
 alias n='nnn -e'
 alias code='vscodium'
 alias r='ranger'
