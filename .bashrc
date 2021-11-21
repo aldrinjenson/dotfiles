@@ -1,32 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-[[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
-
-_set_my_PS1() {
-    PS1='[\u@\h \W]\$ '
-    if [ "$(whoami)" = "liveuser" ] ; then
-        local iso_version="$(grep ^VERSION= /usr/lib/endeavouros-release 2>/dev/null | cut -d '=' -f 2)"
-        if [ -n "$iso_version" ] ; then
-            local prefix="eos-"
-            local iso_info="$prefix$iso_version"
-            PS1="[\u@$iso_info \W]\$ "
-        fi
-    fi
-}
-_set_my_PS1
-unset -f _set_my_PS1
-
-ShowInstallerIsoInfo() {
-    local file=/usr/lib/endeavouros-release
-    if [ -r $file ] ; then
-        cat $file
-    else
-        echo "Sorry, installer ISO info is not available." >&2
-    fi
-}
-
-
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 # alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
@@ -48,7 +22,6 @@ bind '"\e[B":history-search-forward'
 
 _GeneralCmdCheck() {
     # A helper for functions UpdateArchPackages and UpdateAURPackages.
-
     echo "$@" >&2
     "$@" || {
         echo "Error: '$*' failed." >&2
@@ -197,7 +170,6 @@ gc(){
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
 
 set -o vi   #vi mode in bash 
 bind -x '"\C-l": clear;'
@@ -219,10 +191,10 @@ xevf(){
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
 
-export NNN_BMS='c:~/Code;d:~/Desktop;g:~/Clg Stuff'
+export NNN_BMS='c:~/code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
-export NNN_PLUG='f:finder;d:-drag.sh;x:!chmod +x;g:!git log;w:-wall.sh'
+export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:-wall.sh;'
 export NEXT_TELEMETRY_DISABLED=1
 
 #alias ls='ls --color=auto -F'
@@ -244,19 +216,20 @@ alias ggpull='git pull'
 alias n='nnn -e'
 alias code='vscodium'
 alias r='ranger'
-alias v='vim'
+alias v='nvim'
 alias s='cd ~/.scripts && l'
 alias cl='nnn -e ~/clg-stuff'
 alias i3config='vim ~/.config/i3/config'
 alias glog='git log'
 alias gs='git status'
-alias co='cd ~/Code && l'
-export c="~/Code && l"
+alias c="cd ~/code && l"
 alias startdocker='sudo systemctl start docker.service'
 alias z='zathura'
 alias sx='sxiv'
 alias kpr='kjv Proverbs:'
 alias hs='firefox --new-tab http://localhost:1313/ & hugo server -D'
+alias d="cd ~/.dotfiles && ls -a"
+alias ':q'="exit"
 
-~/.scripts/biblequote.sh
 #~/.scripts/meaningDict.sh
+# ~/.scripts/biblequote.sh

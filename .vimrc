@@ -4,16 +4,16 @@ set ignorecase
 set smartcase
 "set mouse=a
 "filetype plugin on
-"set nocompatible
-"colorscheme monokai
+" set nocompatible
+" colorscheme monokai
 
 let mapleader=" "
 
 call plug#begin('~/.vim/plugged')
-   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-   Plug 'SirVer/ultisnips'
-   Plug 'jiangmiao/auto-pairs'
-   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+ "  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ "  Plug 'SirVer/ultisnips'
+ "  Plug 'jiangmiao/auto-pairs'
+ " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
  " Plug 'vimwiki/vimwiki'
 call plug#end()
 

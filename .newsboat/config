@@ -1,0 +1,17 @@
+include /usr/share/doc/newsboat/contrib/colorschemes/inkpot  # colorscheme
+
+auto-reload yes
+reload-threads 100
+macro y set browser "mpv %u" ; open-in-browser ; set browser "elinks %u"
+
+highlight feedlist "---.*---" green default bold
+highlight feedlist ".*0/0.." default default invis
+
+browser firefox
+
+# Keybindings
+bind-key l next
+bind-key h prev
+bind-key k up
+bind-key j down
+

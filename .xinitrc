@@ -2,7 +2,7 @@
 
 #/home/aldrin/.scripts/randombg.sh 
 #/home/aldrin/.scripts/proverbbg.sh
-/usr/bin/dunst &
+# /usr/bin/dunst &
 
 exec i3
 #exec xfce4-session
