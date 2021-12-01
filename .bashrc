@@ -1,6 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 # alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
@@ -108,56 +109,6 @@ UpdateAllPackages() {
 }
 
 
-_open_files_for_editing() {
-    # Open any given document file(s) for editing (or just viewing).
-    # Note1: Do not use for executable files!
-    # Note2: uses mime bindings, so you may need to use
-    #        e.g. a file manager to make some file bindings.
-
-    if [ -x /usr/bin/exo-open ] ; then
-        echo "exo-open $*" >&2
-        /usr/bin/exo-open "$@" >& /dev/null &
-        return
-    fi
-    if [ -x /usr/bin/xdg-open ] ; then
-        for file in "$@" ; do
-            echo "xdg-open $file" >&2
-            /usr/bin/xdg-open "$file" >& /dev/null &
-        done
-        return
-    fi
-
-    echo "Sorry, none of programs [$progs] is found." >&2
-    echo "Tip: install one of packages" >&2
-    for prog in $progs ; do
-        echo "    $(pacman -Qqo "$prog")" >&2
-    done
-}
-
-_Pacdiff() {
-    local differ pacdiff=/usr/bin/pacdiff
-
-    if [ -n "$(echo q | DIFFPROG=diff $pacdiff)" ] ; then
-        for differ in kdiff3 meld diffuse ; do
-            if [ -x /usr/bin/$differ ] ; then
-                DIFFPROG=$differ su-c_wrapper $pacdiff
-                break
-            fi
-        done
-    fi
-}
-
-#------------------------------------------------------------
-
-## Aliases for the functions above.
-## Uncomment an alias if you want to use it.
-##
-
-# alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
-# alias pacdiff=_Pacdiff
-################################################################################
-
-
 ######################## Custom ##################################
 
 PS1="\[\e[31m\]\W\[\033[32m\] \$: " # colors for bash info at the beginning
@@ -177,6 +128,7 @@ bind -x '"\C-l": clear;'
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
 export ANDROID_HOME=/home/aldrin/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=/usr/local/bin:$PATH
 export REACT_EDITOR=vscodium
 export HISTFILESIZE=1000
 
@@ -194,8 +146,8 @@ HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && 
 export NNN_BMS='c:~/code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
-export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:-wall.sh;'
-export NEXT_TELEMETRY_DISABLED=1
+export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
+export NEXT_TELEMETRY_DISABLED=1 # Disable telemetry for nextJs apps
 
 #alias ls='ls --color=auto -F'
 alias l='ls --color=auto -F'
@@ -208,15 +160,15 @@ alias ashare='/home/aldrin/personal/scripts/pashare.sh start'
 alias bashrc='vim ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
 alias scpy='scrcpy -S -w'
-#alias scim='sc-im'
 alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
-alias ccat='highlight -O ansi --force'  # alternative to cat with highlight
+# alias ccat='highlight -O ansi --force'  # alternative to cat with highlight
 alias ggpush='git push'
 alias ggpull='git pull'
 alias n='nnn -e'
 alias code='vscodium'
 alias r='ranger'
 alias v='nvim'
+alias vim='nvim'
 alias s='cd ~/.scripts && l'
 alias cl='nnn -e ~/clg-stuff'
 alias i3config='vim ~/.config/i3/config'
@@ -226,10 +178,13 @@ alias c="cd ~/code && l"
 alias startdocker='sudo systemctl start docker.service'
 alias z='zathura'
 alias sx='sxiv'
-alias kpr='kjv Proverbs:'
+alias kpr='kjv Proverbs'
 alias hs='firefox --new-tab http://localhost:1313/ & hugo server -D'
 alias d="cd ~/.dotfiles && ls -a"
 alias ':q'="exit"
+alias undo='git reset --soft HEAD~1'
+alias ni='npm i'
 
+
+proverbQuote.sh # generate a proverb Quote on new shell open
 #~/.scripts/meaningDict.sh
-# ~/.scripts/biblequote.sh
