@@ -27,9 +27,7 @@ call plug#end()
 
     xmap <leader>f  <Plug>(coc-format-selected)
     nmap <leader>f  <Plug>(coc-format-selected)
-
     nmap <leader>e :CocCommand explorer<CR>
-
 """""""""""""""Coc config end""""""""""""""""""""""""""""""""""""""""""""""""
 
 function ToggleLinuNumbers()

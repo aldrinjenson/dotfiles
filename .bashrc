@@ -117,6 +117,7 @@ shopt -s autocd # Allows you to cd into a directory by just entering it's name
 gc(){
  gcc "$1" -o ~/temp/c_output && ~/temp/c_output
 }
+source /usr/share/bash-completion/completions/git
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -126,8 +127,13 @@ set -o vi   #vi mode in bash
 bind -x '"\C-l": clear;'
 
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
-export ANDROID_HOME=/home/aldrin/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME=/home/aldrin/Android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/bin:$PATH
 export REACT_EDITOR=vscodium
 export HISTFILESIZE=1000
@@ -156,15 +162,16 @@ alias ns="npm start"
 alias nd="npm run dev"
 alias na="npm run android"
 alias p="sudo pacman"
-alias ashare='/home/aldrin/personal/scripts/pashare.sh start'
+alias ashare='pashare.sh start'
 alias bashrc='vim ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
 alias scpy='scrcpy -S -w'
 alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
-# alias ccat='highlight -O ansi --force'  # alternative to cat with highlight
+alias ccat='highlight -O ansi --force'  # alternative to cat with highlight
 alias ggpush='git push'
+alias gush='git push origin'
 alias ggpull='git pull'
-alias n='nnn -e'
+# alias n='nnn -e'
 alias code='vscodium'
 alias r='ranger'
 alias v='nvim'
@@ -184,6 +191,10 @@ alias d="cd ~/.dotfiles && ls -a"
 alias ':q'="exit"
 alias undo='git reset --soft HEAD~1'
 alias ni='npm i'
+alias sql='sudo mysql -u root -p'
+alias gcm='git commit -m'
+
+# alias neovim='nvim'
 
 
 proverbQuote.sh # generate a proverb Quote on new shell open

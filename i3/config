@@ -185,6 +185,10 @@ bindsym $mod+r mode "resize"
 
 
 ################# Custom configs #########################
+
+gaps inner 10
+for_window [class="^.*"] border pixel 2 # To get rid of title bars (clearly visible in terminals)
+
 exec --no-startup-id polybar example 
 exec --no-startup-id nm-applet
 exec --no-startup-id /home/aldrin/.scripts/swapcaps.sh # mapping capslock to escape
