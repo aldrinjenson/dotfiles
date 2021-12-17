@@ -124,7 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 set -o vi   #vi mode in bash 
-bind -x '"\C-l": clear;'
+bind -x '"\C-l": clear;' # ctrl+l to clear tty
 
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
 # export ANDROID_HOME=/home/aldrin/Android/Sdk
@@ -171,7 +171,7 @@ alias ccat='highlight -O ansi --force'  # alternative to cat with highlight
 alias ggpush='git push'
 alias gush='git push origin'
 alias ggpull='git pull'
-# alias n='nnn -e'
+alias n='nnn -e'
 alias code='vscodium'
 alias r='ranger'
 alias v='nvim'
@@ -193,6 +193,7 @@ alias undo='git reset --soft HEAD~1'
 alias ni='npm i'
 alias sql='sudo mysql -u root -p'
 alias gcm='git commit -m'
+alias ccode='code . && exit'
 
 # alias neovim='nvim'
 

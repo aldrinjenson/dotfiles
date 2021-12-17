@@ -186,7 +186,7 @@ bindsym $mod+r mode "resize"
 
 ################# Custom configs #########################
 
-gaps inner 10
+gaps inner 15
 for_window [class="^.*"] border pixel 2 # To get rid of title bars (clearly visible in terminals)
 
 exec --no-startup-id polybar example 
@@ -198,8 +198,9 @@ exec --no-startup-id /home/aldrin/.scripts/checkPowerOff.sh  # shutdown system i
 exec --no-startup-id /home/aldrin/.scripts/proverbbg.sh || /home/aldrin/.scripts/randombg.sh # set proverb as wallpaper 
  
 # keybindings: | use xev command to get the keycode or keysms 
-bindsym shift+Print exec --no-startup-id xfce4-screenshooter # shift + printscreen for taking screenshots
-#exec --no-startup-id picom -CGb
+bindsym Print exec --no-startup-id xfce4-screenshooter # shift + printscreen for taking screenshots
+# exec --no-startup-id picom -CGb
 bindsym $mod+shift+p exec --no-startup-id emojipicker.sh
 bindsym $mod+shift+Escape exec --no-startup-id xfce4-taskmanager # open task manager
+bindsym $mod+grave exec --no-startup-id workbenchCloseOutput.sh
 #bindsym $mod+Alt_L+c exec --no-startup-id /home/aldrin/.scripts/clipHistory.sh 
