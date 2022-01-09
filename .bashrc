@@ -135,8 +135,10 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/bin:$PATH
+
 export REACT_EDITOR=vscodium
 export HISTFILESIZE=1000
+export NEXT_TELEMETRY_DISABLED=1 # Disable telemetry for nextJs apps
 
 xevf(){
  xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
@@ -149,11 +151,13 @@ xevf(){
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
 
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_OPENER=/usr/share/nnn/plugins/nuke
 export NNN_BMS='c:~/code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
-export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
-export NEXT_TELEMETRY_DISABLED=1 # Disable telemetry for nextJs apps
+export NNN_PLUG_DEFAULT='1:ipinfo;p:preview-tabbed;o:fzz;'
+export NNN_PLUG='p:preview-tabbed;1:ipinfo;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
 
 #alias ls='ls --color=auto -F'
 alias l='ls --color=auto -F'
@@ -189,11 +193,12 @@ alias kpr='kjv Proverbs'
 alias hs='firefox --new-tab http://localhost:1313/ & hugo server -D'
 alias d="cd ~/.dotfiles && ls -a"
 alias ':q'="exit"
-alias undo='git reset --soft HEAD~1'
+alias undo='git reset --soft HEAD~1 && echo "Undid latest commit"'
 alias ni='npm i'
 alias sql='sudo mysql -u root -p'
 alias gcm='git commit -m'
 alias ccode='code . && exit'
+alias p8='ping 8.8.8.8'
 
 # alias neovim='nvim'
 
