@@ -152,12 +152,13 @@ xevf(){
 HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
 
 export NNN_FIFO=/tmp/nnn.fifo
-export NNN_OPENER=/usr/share/nnn/plugins/nuke
+# export NNN_OPENER=/usr/share/nnn/plugins/nuke
 export NNN_BMS='c:~/code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
-export NNN_PLUG_DEFAULT='1:ipinfo;p:preview-tabbed;o:fzz;'
-export NNN_PLUG='p:preview-tabbed;1:ipinfo;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
+# export NNN_PLUG_DEFAULT='1:ipinfo;p:preview-tabbed;o:fzz;'
+export NNN_PLUG='p:preview-tabbed;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
+# export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
 
 #alias ls='ls --color=auto -F'
 alias l='ls --color=auto -F'
@@ -168,6 +169,7 @@ alias na="npm run android"
 alias p="sudo pacman"
 alias ashare='pashare.sh start'
 alias bashrc='vim ~/.bashrc'
+alias polybarconfig='vim ~/.config/polybar/config'
 alias vimrc='vim ~/.vimrc'
 alias scpy='scrcpy -S -w'
 alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
@@ -195,13 +197,18 @@ alias d="cd ~/.dotfiles && ls -a"
 alias ':q'="exit"
 alias undo='git reset --soft HEAD~1 && echo "Undid latest commit"'
 alias ni='npm i'
+alias nutt='neomutt'
 alias sql='sudo mysql -u root -p'
 alias gcm='git commit -m'
 alias ccode='code . && exit'
 alias p8='ping 8.8.8.8'
-
+alias topdf='libreoffice --convert-to pdf' 
+alias sv='sdcv --use-dict "Oxford Advanced Learner'\''s Dictionary"' # for minimal dictionary searches
+alias msql="mycli -u root"
 # alias neovim='nvim'
 
 
 proverbQuote.sh # generate a proverb Quote on new shell open
 #~/.scripts/meaningDict.sh
+
+# WINE=${WINE:-wine} WINEPREFIX=${WINEPREFIX:-$HOME/.wine} $WINE regedit /tmp/fontsmoothing 2> /dev/null
