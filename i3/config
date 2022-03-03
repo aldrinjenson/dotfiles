@@ -191,7 +191,7 @@ bindsym $mod+r mode "resize"
 
 ################# Custom configs #########################
 
-gaps inner 15
+gaps inner 10
 for_window [class="^.*"] border pixel 2 # To get rid of title bars (clearly visible in terminals)
 
 exec --no-startup-id polybar example 
@@ -203,10 +203,13 @@ exec --no-startup-id /home/aldrin/.scripts/checkPowerOff.sh  # shutdown system i
 exec --no-startup-id /home/aldrin/.scripts/proverbbg.sh || /home/aldrin/.scripts/randombg.sh # set proverb as wallpaper 
  
 # keybindings: | use xev command to get the keycode or keysms 
-bindsym Print exec --no-startup-id xfce4-screenshooter # shift + printscreen for taking screenshots
+bindsym Print exec --no-startup-id xfce4-screenshooter -r # printscreen for taking screenshots of a region
+bindsym shift+Print exec --no-startup-id xfce4-screenshooter  # shift + printscreen for opening the gui window 
 # exec --no-startup-id picom -CGb
 bindsym $mod+shift+p exec --no-startup-id emojipicker.sh
 bindsym $mod+shift+Escape exec --no-startup-id xfce4-taskmanager # open task manager
+bindsym $mod+shift_L+KP_Add exec --no-startup-id brightnessctl 10%+
+bindsym $mod+shift_L+KP_Subtract exec --no-startup-id brightnessctl 10%-
 # bindsym $mod+grave exec --no-startup-id workbenchCloseOutput.sh
 bindsym $mod+n exec --no-startup-id nokiaWifiConnect.sh # connect to nokia wifi
 # bindcode 37+24 exec --no-startup-id /bin/true

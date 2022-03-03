@@ -205,6 +205,7 @@ alias p8='ping 8.8.8.8'
 alias topdf='libreoffice --convert-to pdf' 
 alias sv='sdcv --use-dict "Oxford Advanced Learner'\''s Dictionary"' # for minimal dictionary searches
 alias msql="mycli -u root"
+alias lpdf="libreoffice --convert-to pdf"
 # alias neovim='nvim'
 
 
