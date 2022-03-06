@@ -5,7 +5,7 @@
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 # alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-alias grep='grep --color=auto'
+alias grep='grep --line-number --with-filename --color=auto'
 
 [[ "$(whoami)" = "root" ]] && return
 
@@ -183,7 +183,7 @@ alias r='ranger'
 alias v='nvim'
 alias vim='nvim'
 alias s='cd ~/.scripts && l'
-alias cl='nnn -e ~/clg-stuff'
+alias cl='cd ~/clg-stuff && l && nnn -e .'
 alias i3config='vim ~/.config/i3/config'
 alias glog='git log'
 alias gs='git status'
