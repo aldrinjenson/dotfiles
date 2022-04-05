@@ -184,14 +184,14 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
-#        status_command i3status
-#        position top
+       # status_command i3status
+       # position bottom
 # }
 
 
 ################# Custom configs #########################
 
-gaps inner 10
+# gaps inner 10
 for_window [class="^.*"] border pixel 2 # To get rid of title bars (clearly visible in terminals)
 
 exec --no-startup-id polybar example 
@@ -201,15 +201,21 @@ exec --no-startup-id safeeyes # start safeeyes on first i3 boot
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id /home/aldrin/.scripts/checkPowerOff.sh  # shutdown system if the time is b/w 12 am to 6 am as soon as the pc is powered on
 exec --no-startup-id /home/aldrin/.scripts/proverbbg.sh || /home/aldrin/.scripts/randombg.sh # set proverb as wallpaper 
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+exec --no-startup-id python /home/aldrin/.scripts/temp/batteryChecker.py & # change this to a custom polybar script
  
 # keybindings: | use xev command to get the keycode or keysms 
-bindsym Print exec --no-startup-id xfce4-screenshooter -r # printscreen for taking screenshots of a region
-bindsym shift+Print exec --no-startup-id xfce4-screenshooter  # shift + printscreen for opening the gui window 
+bindsym Print exec --no-startup-id xfce4-screenshooter -rc # printscreen for taking screenshots of a region
+bindsym shift+Print exec --no-startup-id xfce4-screenshooter -r # printscreen for taking screenshots of a region
+# bindsym shift+Print exec --no-startup-id xfce4-screenshooter  # shift + printscreen for opening the gui window 
 # exec --no-startup-id picom -CGb
+# exec --no-startup-id picom -b
 bindsym $mod+shift+p exec --no-startup-id emojipicker.sh
 bindsym $mod+shift+Escape exec --no-startup-id xfce4-taskmanager # open task manager
 bindsym $mod+shift_L+KP_Add exec --no-startup-id brightnessctl 10%+
 bindsym $mod+shift_L+KP_Subtract exec --no-startup-id brightnessctl 10%-
 # bindsym $mod+grave exec --no-startup-id workbenchCloseOutput.sh
 bindsym $mod+n exec --no-startup-id nokiaWifiConnect.sh # connect to nokia wifi
-# bindcode 37+24 exec --no-startup-id /bin/true
+# bindcode 37+24 exec --no-startup-id /bin/true # disable this key press
+

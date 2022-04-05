@@ -179,11 +179,11 @@ alias gush='git push origin'
 alias ggpull='git pull'
 alias n='nnn -e'
 alias code='vscodium'
-alias r='ranger'
+# alias r='ranger'
 alias v='nvim'
 alias vim='nvim'
-alias s='cd ~/.scripts && l'
-alias cl='cd ~/clg-stuff && l && nnn -e .'
+alias s='cd ~/.scripts && l && nnn -e'
+alias cl='cd ~/clg-stuff && nnn -e .'
 alias i3config='vim ~/.config/i3/config'
 alias glog='git log'
 alias gs='git status'
@@ -202,12 +202,16 @@ alias sql='sudo mysql -u root -p'
 alias gcm='git commit -m'
 alias ccode='code . && exit'
 alias p8='ping 8.8.8.8'
-alias topdf='libreoffice --convert-to pdf' 
 alias sv='sdcv --use-dict "Oxford Advanced Learner'\''s Dictionary"' # for minimal dictionary searches
 alias msql="mycli -u root"
 alias lpdf="libreoffice --convert-to pdf"
 # alias neovim='nvim'
+alias slf='stripe listen --forward-to localhost:3000/api/stripe/stripe-hooks'
+alias conky='conky -c ~/.config/conky/.conkyrc'
+alias gsoc='cd ~/temp/gsoc && ( firefox "http://localhost:5000/" & npm run start & )'
+alias pomodoro='pomodoro.sh'
 
+# export FLASK_DEBUG=1
 
 proverbQuote.sh # generate a proverb Quote on new shell open
 #~/.scripts/meaningDict.sh
