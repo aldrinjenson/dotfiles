@@ -156,27 +156,27 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+  bindsym h resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym j resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+# back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 exec --no-startup-id xsetroot -solid "#333333"
 bindsym $mod+r mode "resize"
@@ -184,8 +184,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
-       # status_command i3status
-       # position bottom
+# status_command i3status
+# position bottom
 # }
 
 
@@ -194,21 +194,46 @@ bindsym $mod+r mode "resize"
 # gaps inner 10
 for_window [class="^.*"] border pixel 2 # To get rid of title bars (clearly visible in terminals)
 
-exec --no-startup-id polybar example 
+exec --no-startup-id polybar example
 exec --no-startup-id nm-applet
 exec --no-startup-id /home/aldrin/.scripts/swapcaps.sh # mapping capslock to escape
 exec --no-startup-id safeeyes # start safeeyes on first i3 boot
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id /home/aldrin/.scripts/checkPowerOff.sh  # shutdown system if the time is b/w 12 am to 6 am as soon as the pc is powered on
-exec --no-startup-id /home/aldrin/.scripts/proverbbg.sh || /home/aldrin/.scripts/randombg.sh # set proverb as wallpaper 
+exec --no-startup-id /home/aldrin/.scripts/proverbbg.sh || /home/aldrin/.scripts/randombg.sh # set proverb as wallpaper
 
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! custom
+
+bindsym $mod+Tab focus floating
+
+bindsym $mod+shift+Tab focus floating
+# move floating windows with keys
+bindsym $mod+m mode "move" focus floating
+mode "move" {
+# bindsym $mod+Tab focus right
+
+  bindsym Left  move left
+    bindsym Down  move down
+    bindsym Up    move up
+    bindsym Right move right
+
+    bindsym h     move left
+    bindsym j     move down
+    bindsym k     move up
+    bindsym l     move right
+
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+
 exec --no-startup-id python /home/aldrin/.scripts/temp/batteryChecker.py & # change this to a custom polybar script
- 
-# keybindings: | use xev command to get the keycode or keysms 
+
+# keybindings: | use xev command to get the keycode or keysms
 bindsym Print exec --no-startup-id xfce4-screenshooter -rc # printscreen for taking screenshots of a region
 bindsym shift+Print exec --no-startup-id xfce4-screenshooter -r # printscreen for taking screenshots of a region
-# bindsym shift+Print exec --no-startup-id xfce4-screenshooter  # shift + printscreen for opening the gui window 
+# bindsym shift+Print exec --no-startup-id xfce4-screenshooter  # shift + printscreen for opening the gui window
 # exec --no-startup-id picom -CGb
 # exec --no-startup-id picom -b
 bindsym $mod+shift+p exec --no-startup-id emojipicker.sh

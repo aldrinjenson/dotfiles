@@ -13,14 +13,23 @@ endfunction
 function! myspacevim#after() abort
   set wildignore+=*/tmp/*,*.so,*.swp,*.zip
   set wrap
+
   " set incsearch
   source /home/aldrin/.SpaceVim.d/autoload/vcomments.vim
   noremap <silent> <C-_>  :call CommentLine()<CR>
   noremap <F3> :Autoformat<CR>
-  " find the next linting error
+  au BufWrite * :Autoformat " auto format on save
+
+  "navigate to the next linting error
   noremap <F2> :lprevious<CR>
   noremap <F4> :lnext<CR>
-  au BufWrite * :Autoformat " format on save
+
+  "easier split navigation
+  nnoremap <C-J> <C-W><C-J>
+  nnoremap <C-K> <C-W><C-K>
+  nnoremap <C-L> <C-W><C-L>
+  nnoremap <C-H> <C-W><C-H>
+
 
   " autocmd BufNewFile *.sh 0r /home/aldrin/.SpaceVim.d/autoload/templates/bash-skeleton.sh
 
