@@ -13,6 +13,8 @@ endfunction
 function! myspacevim#after() abort
   set wildignore+=*/tmp/*,*.so,*.swp,*.zip
   set wrap
+  " set ic " set ignorecase
+  set smartcase
 
   " set incsearch
   source /home/aldrin/.SpaceVim.d/autoload/vcomments.vim
