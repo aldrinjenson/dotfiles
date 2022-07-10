@@ -4,6 +4,6 @@
 #/home/aldrin/.scripts/proverbbg.sh
 # /usr/bin/dunst &
 
-xset s 1800 1800
+xset s 1800 1800 # to set the screen timeout
 exec i3
-#exec xfce4-session
+# exec xfce4-session

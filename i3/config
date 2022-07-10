@@ -191,7 +191,8 @@ bindsym $mod+r mode "resize"
 
 ################# Custom configs #########################
 
-# gaps inner 10
+gaps inner 4
+
 for_window [class="^.*"] border pixel 2 # To get rid of title bars (clearly visible in terminals)
 
 exec --no-startup-id polybar example
@@ -243,5 +244,7 @@ bindsym $mod+shift_L+KP_Add exec --no-startup-id brightnessctl 10%+
 bindsym $mod+shift_L+KP_Subtract exec --no-startup-id brightnessctl 10%-
 # bindsym $mod+grave exec --no-startup-id workbenchCloseOutput.sh
 bindsym $mod+n exec --no-startup-id nokiaWifiConnect.sh # connect to nokia wifi
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +20% # increase brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 20%- # decrease brightness
 # bindcode 37+24 exec --no-startup-id /bin/true # disable this key press
 
