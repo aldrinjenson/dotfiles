@@ -160,6 +160,11 @@ export NNN_PLUG='p:preview-tabbed;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!ch
 
 # export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
 
+# export FLASK_DEBUG=1
+proverbQuote.sh # generate a proverb Quote on new shell open
+#~/.scripts/meaningDict.sh
+# WINE=${WINE:-wine} WINEPREFIX=${WINEPREFIX:-$HOME/.wine} $WINE regedit /tmp/fontsmoothing 2> /dev/null
+
 #alias ls='ls --color=auto -F'
 alias l='ls --color=auto -F'
 alias t="tldr"
@@ -202,6 +207,7 @@ alias ni='npm i'
 alias nutt='neomutt'
 alias sql='sudo mysql -u root -p'
 alias gcm='git commit -m'
+alias gc='git clone'
 alias ccode='code . && exit'
 alias p8='ping 8.8.8.8'
 alias sv='sdcv --use-dict "Oxford Advanced Learner'\''s Dictionary"' # for minimal dictionary searches
@@ -213,11 +219,7 @@ alias conky='conky -c ~/.config/conky/.conkyrc'
 alias gsoc='cd ~/temp/gsoc && ( firefox "http://localhost:5000/" & npm run start & )'
 alias pomodoro='pomodoro.sh'
 alias lv='lvim'
+alias x='xdg-open'
 # alias v='lvim'
-
-# export FLASK_DEBUG=1
-
-proverbQuote.sh # generate a proverb Quote on new shell open
-#~/.scripts/meaningDict.sh
-
-# WINE=${WINE:-wine} WINEPREFIX=${WINEPREFIX:-$HOME/.wine} $WINE regedit /tmp/fontsmoothing 2> /dev/null
+alias flc="flutter create" # add folder_path as the next argument
+alias cp="cp -v"

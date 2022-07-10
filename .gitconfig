@@ -1,0 +1,7 @@
+[user]
+	email = aldrinjenson@gmail.com
+	name = Aldrin Jenson
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
