@@ -1,3 +1,4 @@
+set first-page-columng 1:1  # do start with the first column when using double page mode
 set selection-clipboard clipboard
 map . scroll full-down 
 map , scroll full-up

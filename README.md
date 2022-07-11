@@ -5,9 +5,12 @@ in Home Dir:
 - .xprofile
 - .bashrc
 - .vimrc
+- .gitconfig
+- .myclirc
 
 in .config Dir:
 - i3
 
 
 (prolly have to use stow once the config files gets larger :))
+zathura

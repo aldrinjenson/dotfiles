@@ -223,3 +223,5 @@ alias x='xdg-open'
 # alias v='lvim'
 alias flc="flutter create" # add folder_path as the next argument
 alias cp="cp -v"
+alias fs="fs.sh"
+
