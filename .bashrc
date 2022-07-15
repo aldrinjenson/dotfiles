@@ -225,3 +225,7 @@ alias flc="flutter create" # add folder_path as the next argument
 alias cp="cp -v"
 alias fs="fs.sh"
 
+alias f="fuck"
+alias rm="rmtrash"
+alias rmdir="rmdirtrash"
+export PROMPT_COMMAND="history -a; history -n"
