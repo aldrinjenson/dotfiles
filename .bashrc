@@ -108,8 +108,8 @@ UpdateAllPackages() {
 
 ######################## Custom ##################################
 
-PS1="\[\e[31m\]\W\[\033[32m\] \$: " # colors for bash info at the beginning
-shopt -s autocd                     # Allows you to cd into a directory by just entering it's name
+PS1="\[\u \h \e[31m\]\W\[\033[32m\] \$: " # colors for bash info at the beginning
+shopt -s autocd                           # Allows you to cd into a directory by just entering it's name
 
 gc() {
   gcc "$1" -o ~/temp/c_output && ~/temp/c_output
@@ -224,4 +224,3 @@ alias x='xdg-open'
 alias flc="flutter create" # add folder_path as the next argument
 alias cp="cp -v"
 alias fs="fs.sh"
-
