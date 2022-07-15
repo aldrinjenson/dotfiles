@@ -59,7 +59,7 @@ font-2 = "Wuncon Siji:pixelsize=10;1"
 modules-left = i3 xwindow 
 ; modules-left = bspwm i3
 modules-center = mpd
-modules-right = timer battery filesystem xbacklight pulseaudio memory cpu temperature nmutt wlan date
+modules-right = timer battery battery2 filesystem xbacklight pulseaudio memory cpu temperature nmutt wlan date
 ; modules-right =filesystem xbacklight pulseaudio memory cpu temperature timer nmutt wlan date
 
 tray-position = right
@@ -353,9 +353,15 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/battery]
+[module/battery2]
 type = internal/battery
 battery = BAT0
+adapter = AC
+full-at = 98
+
+[module/battery]
+type = internal/battery
+battery = BAT1
 adapter = AC
 full-at = 98
 

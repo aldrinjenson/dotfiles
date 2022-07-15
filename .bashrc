@@ -151,11 +151,11 @@ xevf() {
 HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH
 
 export NNN_FIFO=/tmp/nnn.fifo
-# export NNN_OPENER=/usr/share/nnn/plugins/nuke
+export NNN_OPENER=/usr/share/nnn/plugins/nuke
 export NNN_BMS='c:~/code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
-# export NNN_PLUG_DEFAULT='1:ipinfo;p:preview-tabbed;o:fzz;'
+export NNN_PLUG_DEFAULT='1:ipinfo;p:preview-tabbed;o:fzz;'
 export NNN_PLUG='p:preview-tabbed;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;c:/home/aldrin/.scripts/nnn-scripts/open-with-code.sh'
 
 # export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
