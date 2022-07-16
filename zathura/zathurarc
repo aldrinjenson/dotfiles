@@ -2,3 +2,5 @@ set first-page-columng 1:1  # do start with the first column when using double p
 set selection-clipboard clipboard
 map . scroll full-down 
 map , scroll full-up
+map <C-+> zoom in
+map <C--> zoom out

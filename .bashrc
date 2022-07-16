@@ -120,7 +120,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-set -o vi                #vi mode in bash
+# set -o vi                #vi mode in bash
 bind -x '"\C-l": clear;' # ctrl+l to clear tty
 
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
@@ -134,7 +134,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/misc/flutter/bin:$PATH
 
-export REACT_EDITOR=vscodium
+export REACT_EDITOR=code-oss
+export EDITOR=vim
 export HISTFILESIZE=1000
 export NEXT_TELEMETRY_DISABLED=1 # Disable telemetry for nextJs apps
 export CHROME_EXECUTABLE=/usr/bin/chromium
@@ -184,11 +185,11 @@ alias ggpush='git push'
 alias gush='git push origin'
 alias ggpull='git pull'
 alias n='nnn -e'
-alias code='vscodium'
+alias code='code-oss'
 # alias r='ranger'
 alias v='nvim'
 alias vim='nvim'
-alias s='cd ~/.scripts && l && nnn -e'
+alias s='cd ~/.scripts && l '
 alias cl='cd ~/clg-stuff && nnn -e .'
 alias i3config='vim ~/.config/i3/config'
 alias glog='git log'
