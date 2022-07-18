@@ -131,6 +131,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/build-tools
+export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.0
+export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.0
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/misc/flutter/bin:$PATH
 

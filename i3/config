@@ -192,11 +192,11 @@ bindsym $mod+r mode "resize"
 
 ################# Custom configs #########################
 
-gaps inner 10
+gaps inner 7
 
-for_window [class="^.*"] border pixel 2 # To get rid of title bars (clearly visible in terminals)
-# client.focused border #FF0000 10
-client.focused  #FF0000 #285577 #ffffff #2e9ef4   #285577
+# To get rid of title bars (clearly visible in terminals)
+for_window [class="^.*"] border pixel 2 
+
 exec --no-startup-id polybar example
 exec --no-startup-id nm-applet
 exec --no-startup-id /home/aldrin/.scripts/swapcaps.sh # mapping capslock to escape
@@ -216,7 +216,6 @@ bindsym $mod+shift+Tab focus floating
 bindsym $mod+m mode "move" focus floating
 mode "move" {
 # bindsym $mod+Tab focus right
-
   bindsym Left  move left
     bindsym Down  move down
     bindsym Up    move up
