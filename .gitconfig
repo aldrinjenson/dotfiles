@@ -5,3 +5,6 @@
 	defaultBranch = main
 [color]
 	ui = auto
+; The global gitignore file
+[core]
+	excludesFile = ~/.globalGitIgnore

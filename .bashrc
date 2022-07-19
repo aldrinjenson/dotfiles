@@ -1,10 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ll='ls -lav --ignore=..' # show long listing of all except ".."
-# alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-alias l='ls -lav --ignore=.?*' # show long listing but no hidden dotfiles except "."
-alias grep='grep --line-number --with-filename --color=auto'
 
 [[ "$(whoami)" = "root" ]] && return
 
@@ -131,8 +127,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/build-tools
-export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.0
+export PATH=$PATH:$ANDROID_HOME/build-tools/
+export PATH=$PATH:$ANDROID_HOME/build-tools/31.0.0
 export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.0
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/misc/flutter/bin:$PATH
@@ -169,8 +165,19 @@ proverbQuote.sh # generate a proverb Quote on new shell open
 #~/.scripts/meaningDict.sh
 # WINE=${WINE:-wine} WINEPREFIX=${WINEPREFIX:-$HOME/.wine} $WINE regedit /tmp/fontsmoothing 2> /dev/null
 
+
+# alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+alias ls='lsd'
+# alias l='ls -lav --ignore=.?*' # show long listing but no hidden dotfiles except "."
+# alias grep='grep --line-number --with-filename --color=auto'
+alias grep='rg'
+alias tree='lsd --tree'
+# alias ll='ls -lav --ignore=..' # show long listing of all except ".."
+alias ll='lsd -lav --ignore-glob=..' # show long listing of all except ".."
+alias l='ls'
+
 #alias ls='ls --color=auto -F'
-alias l='ls --color=auto -F'
+# alias l='ls --color=auto -F'
 alias t="tldr"
 alias ns="npm start"
 alias nd="npm run dev"
@@ -233,3 +240,7 @@ alias f="fuck"
 alias rm="rmtrash"
 alias rmdir="rmdirtrash"
 export PROMPT_COMMAND="history -a; history -n"
+
+cat todo.md
+[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+
