@@ -1,6 +1,6 @@
 # will run whenever the X server is started starts from a tty using startx
 
-#/home/aldrin/.scripts/randombg.sh 
+#/home/aldrin/.scripts/randombg.sh
 #/home/aldrin/.scripts/proverbbg.sh
 # /usr/bin/dunst &
 

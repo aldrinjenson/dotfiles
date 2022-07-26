@@ -56,7 +56,7 @@ font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 # font-2 = siji:pixelsize=10;1
 font-2 = "Wuncon Siji:pixelsize=10;1"
 
-modules-left = i3 xwindow 
+modules-left = i3 xwindow
 ; modules-left = bspwm i3
 modules-center = mpd
 modules-right = timer battery battery2 filesystem xbacklight pulseaudio memory cpu temperature nmutt wlan date

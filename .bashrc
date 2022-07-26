@@ -1,7 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
 [[ "$(whoami)" = "root" ]] && return
 
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100 # limits recursive functions, see 'man bash'
@@ -20,44 +19,44 @@ _GeneralCmdCheck() {
   echo "$@" >&2
   "$@" || {
     echo "Error: '$*' failed." >&2
-    exit 1
+      exit 1
+    }
   }
-}
 
-_CheckInternetConnection() {
-  # curl --silent --connect-timeout 8 https://8.8.8.8 >/dev/null
-  eos-connection-checker
-  local result=$?
-  test $result -eq 0 || echo "No internet connection!" >&2
-  return $result
-}
+  _CheckInternetConnection() {
+    # curl --silent --connect-timeout 8 https://8.8.8.8 >/dev/null
+    eos-connection-checker
+    local result=$?
+    test $result -eq 0 || echo "No internet connection!" >&2
+    return $result
+  }
 
-_CheckArchNews() {
-  local conf=/etc/eos-update-notifier.conf
+  _CheckArchNews() {
+    local conf=/etc/eos-update-notifier.conf
 
-  if [ -z "$CheckArchNewsForYou" ] && [ -r $conf ]; then
-    source $conf
-  fi
-
-  if [ "$CheckArchNewsForYou" = "yes" ]; then
-    local news="$(yay -Pw)"
-    if [ -n "$news" ]; then
-      echo "Arch news:" >&2
-      echo "$news" >&2
-      echo "" >&2
-      # read -p "Press ENTER to continue (or Ctrl-C to stop): "
-    else
-      echo "No Arch news." >&2
+    if [ -z "$CheckArchNewsForYou" ] && [ -r $conf ]; then
+      source $conf
     fi
-  fi
-}
 
-UpdateArchPackages() {
-  # Updates Arch packages.
+    if [ "$CheckArchNewsForYou" = "yes" ]; then
+      local news="$(yay -Pw)"
+      if [ -n "$news" ]; then
+        echo "Arch news:" >&2
+        echo "$news" >&2
+        echo "" >&2
+        # read -p "Press ENTER to continue (or Ctrl-C to stop): "
+      else
+        echo "No Arch news." >&2
+      fi
+    fi
+  }
 
-  _CheckInternetConnection || return 1
+  UpdateArchPackages() {
+    # Updates Arch packages.
 
-  _CheckArchNews
+    _CheckInternetConnection || return 1
+
+    _CheckArchNews
 
   #local updates="$(yay -Qu --repo)"
   local updates="$(checkupdates)"
@@ -185,7 +184,7 @@ alias na="npm run android"
 alias p="sudo pacman"
 alias ashare='pashare.sh start'
 alias bashrc='vim ~/.bashrc'
-alias polybarconfig='vim ~/.config/polybar/config'
+alias polybarconfig='vim ~/.config/polybar/config.ini'
 # alias vimrc='vim ~/.vimrc'
 alias vimrc='vim ~/.SpaceVim.d/autoload/myspacevim.vim'
 alias scpy='scrcpy -S -w'
@@ -241,6 +240,5 @@ alias rm="rmtrash"
 alias rmdir="rmdirtrash"
 export PROMPT_COMMAND="history -a; history -n"
 
-cat todo.md
 [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
