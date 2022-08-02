@@ -1,6 +1,6 @@
 export TERMINFO=/usr/share/terminfo
 export PATH=$PATH:/home/aldrin/.scripts
-# export PATH=$PATH:/home/aldrin/.scripts/polybar-scripts/
+export PATH=$PATH:/home/aldrin/.scripts/polybar-scripts/
 # export PATH=$PATH:/home/aldrin/.local/bin/
 # export PATH=$PATH:/usr/local/bin/
 # setleds -D +num

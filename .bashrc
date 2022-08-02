@@ -106,10 +106,17 @@ UpdateAllPackages() {
 PS1="\[\e[31m\]\W\[\033[32m\] \$: " # colors for bash info at the beginning
 shopt -s autocd                     # Allows you to cd into a directory by just entering it's name
 
-gc() {
+function gc() {
   gcc "$1" -o ~/temp/c_output && ~/temp/c_output
 }
 source /usr/share/bash-completion/completions/git
+source /usr/share/bash-completion/completions/killall
+source /usr/share/bash-completion/completions/code-oss
+source /usr/share/bash-completion/completions/gcc
+source /usr/share/bash-completion/completions/chmod
+source /usr/share/bash-completion/completions/chown
+source /usr/share/bash-completion/completions/nmcli
+source /usr/share/bash-completion/completions/rsync
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
@@ -134,11 +141,12 @@ export PATH=$HOME/misc/flutter/bin:$PATH
 
 export REACT_EDITOR=code-oss
 export EDITOR=vim
+export PAGER=less
 export HISTFILESIZE=1000
 export NEXT_TELEMETRY_DISABLED=1 # Disable telemetry for nextJs apps
 export CHROME_EXECUTABLE=/usr/bin/chromium
 
-xevf() {
+function xevf() {
   xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 }
 
@@ -150,7 +158,8 @@ xevf() {
 HEROKU_AC_BASH_SETUP_PATH=/home/aldrin/.cache/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH
 
 export NNN_FIFO=/tmp/nnn.fifo
-export NNN_OPENER=/usr/share/nnn/plugins/nuke
+# export NNN_OPENER=/usr/share/nnn/plugins/nuke
+# export NNN_OPENER=/home/aldrin/.config/nnn/plugins/nuke
 export NNN_BMS='c:~/code;d:~/Desktop;g:~/Clg Stuff'
 export NNN_USE_EDITOR=1
 export NNN_DE_FILE_MANAGER=thunar
@@ -238,7 +247,12 @@ alias fs="fs.sh"
 alias f="fuck"
 alias rm="rmtrash"
 alias rmdir="rmdirtrash"
-export PROMPT_COMMAND="history -a; history -n"
+export PROMPT_COMMAND="history -a; history -n" # to sync histories across terminals
+alias musicdl="mpsyt"
+alias ncp="ncmpcpp"
+alias npc="ncmpcpp"
+alias graph='git log --all --decorate --oneline --graph'
+alias conflict='git diff --name-only --diff-filter=U'
 
-[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+# [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
