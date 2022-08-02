@@ -11,10 +11,12 @@ function! myspacevim#before() abort
 endfunction
 
 function! myspacevim#after() abort
-  set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+  set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git
   set wrap
   " set ic " set ignorecase
   set smartcase
+  set shellcmdflag=-ic
+  " to make the shell behave as bash
 
   " set incsearch
   source /home/aldrin/.SpaceVim.d/autoload/vcomments.vim

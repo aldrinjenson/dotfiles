@@ -253,6 +253,8 @@ alias ncp="ncmpcpp"
 alias npc="ncmpcpp"
 alias graph='git log --all --decorate --oneline --graph'
 alias conflict='git diff --name-only --diff-filter=U'
+alias cw="cd ~/code/work && ls"
+alias b="cd ~/code/my-blog && ls"
 
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
