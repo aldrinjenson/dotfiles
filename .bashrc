@@ -111,9 +111,6 @@ function gc() {
 }
 source /usr/share/bash-completion/completions/git
 source /usr/share/bash-completion/completions/killall
-source /usr/share/bash-completion/completions/code-oss
-source /usr/share/bash-completion/completions/gcc
-source /usr/share/bash-completion/completions/chmod
 source /usr/share/bash-completion/completions/chown
 source /usr/share/bash-completion/completions/nmcli
 source /usr/share/bash-completion/completions/rsync
@@ -140,6 +137,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/misc/flutter/bin:$PATH
 
 export REACT_EDITOR=code-oss
+export $BROWSER=firefox
 export EDITOR=vim
 export PAGER=less
 export HISTFILESIZE=1000
@@ -169,7 +167,7 @@ export NNN_PLUG='p:preview-tabbed;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!ch
 # export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
 
 # export FLASK_DEBUG=1
-proverbQuote.sh # generate a proverb Quote on new shell open
+proverbQuote.sh & # generate a proverb Quote on new shell open
 #~/.scripts/meaningDict.sh
 # WINE=${WINE:-wine} WINEPREFIX=${WINEPREFIX:-$HOME/.wine} $WINE regedit /tmp/fontsmoothing 2> /dev/null
 
@@ -255,6 +253,9 @@ alias graph='git log --all --decorate --oneline --graph'
 alias conflict='git diff --name-only --diff-filter=U'
 alias cw="cd ~/code/work && ls"
 alias b="cd ~/code/my-blog && ls"
+alias muttrc="vim ~/.muttrc"
 
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+
+# source /usr/share/nvm/init-nvm.sh
 

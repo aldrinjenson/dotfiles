@@ -62,8 +62,8 @@ name = 'github'
 
 [[layers]]
 name = 'lang#javascript'
-auto_fix = true
-enable_flow_syntax
+auto_fix = false
+enable_flow_syntax=true
 format_on_save = true
 
 # [[layers]]
@@ -76,6 +76,9 @@ clang_executable = "/usr/bin/clang"
 clang_flag = ['-I/user/include']
 [layer.clang_std]
 cpp = "c++20"
+
+[[layers]]
+name = "lang#python"
 
 [[layers]]
 name = "lang#typescript"
