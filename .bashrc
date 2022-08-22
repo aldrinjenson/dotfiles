@@ -134,7 +134,12 @@ export PATH=$PATH:$ANDROID_HOME/build-tools/
 export PATH=$PATH:$ANDROID_HOME/build-tools/31.0.0
 export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.0
 export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+# export PATH=$HOME/.local/lib/python3.10/site-packages:$PATH
+export PATH=$HOME/.local/lib/python3.10/site-packages/graphviz:$PATH
 export PATH=$HOME/misc/flutter/bin:$PATH
+export PATH=$HOME/code/utils/ai_utilities:$PATH
+
 
 export REACT_EDITOR=code-oss
 export $BROWSER=firefox
@@ -167,7 +172,6 @@ export NNN_PLUG='p:preview-tabbed;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!ch
 # export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
 
 # export FLASK_DEBUG=1
-proverbQuote.sh & # generate a proverb Quote on new shell open
 #~/.scripts/meaningDict.sh
 # WINE=${WINE:-wine} WINEPREFIX=${WINEPREFIX:-$HOME/.wine} $WINE regedit /tmp/fontsmoothing 2> /dev/null
 
@@ -208,9 +212,13 @@ alias vim='nvim'
 alias s='cd ~/.scripts && l '
 alias cl='cd ~/clg-stuff && nnn -e .'
 alias i3config='vim ~/.config/i3/config'
+
+# git commands
 alias glog='git log'
+alias gcl='git clone'
 alias ghs='gs'
 alias gs='git status'
+
 alias c="cd ~/code && l"
 alias startdocker='sudo systemctl start docker.service'
 alias z='zathura'
@@ -240,7 +248,7 @@ alias x='xdg-open'
 # alias v='lvim'
 alias flc="flutter create" # add folder_path as the next argument
 alias cp="cp -v"
-alias fs="fs.sh"
+alias fs="fs.sh" # search all custom scripts and open them with vim
 
 alias f="fuck"
 alias rm="rmtrash"
@@ -254,8 +262,15 @@ alias conflict='git diff --name-only --diff-filter=U'
 alias cw="cd ~/code/work && ls"
 alias b="cd ~/code/my-blog && ls"
 alias muttrc="vim ~/.muttrc"
+alias wl="ls -l | wc -l"
+alias disableNine="xmodmap -e 'keycode 18='"
+alias jupiterStart="jupyter-notebook /home/aldrin/code/learn/fastbook"
+# alias jpgToJpeg = "mogrify -auto-orient -format jpeg *.jpg && rm *.jpg"
+
 
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
 # source /usr/share/nvm/init-nvm.sh
 
+# proverbQuote.sh # generate a proverb Quote on new shell open
+echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"

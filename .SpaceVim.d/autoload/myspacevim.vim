@@ -15,7 +15,7 @@ function! myspacevim#after() abort
   set wrap
   " set ic " set ignorecase
   set smartcase
-  set shellcmdflag=-ic
+  " set shellcmdflag=-ic
   " to make the shell behave as bash
 
   " set incsearch

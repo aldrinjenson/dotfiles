@@ -192,7 +192,7 @@ bindsym $mod+r mode "resize"
 
 ################# Custom configs #########################
 
-gaps inner 7
+gaps inner 5
 
 # To get rid of title bars (clearly visible in terminals)
 for_window [class="^.*"] border pixel 2
@@ -264,6 +264,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% # increas
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decrease brightness
 # bindsym $alt+Shift_l+v exec xdotool key Ctrl+shift+v # decrease brightness
 bindsym Alt_L+Shift_L+v exec --no-startup-id xdotool key Ctrl+shift+v # decrease brightness
+bindsym Alt_L+apostrophe exec --no-startup-id xdotool key 9
 # bindsym Meta_R exec --no-startup-id xdotool key Menu
 # trigger right click menu
 
