@@ -110,10 +110,10 @@ function gc() {
   gcc "$1" -o ~/temp/c_output && ~/temp/c_output
 }
 source /usr/share/bash-completion/completions/git
-source /usr/share/bash-completion/completions/killall
-source /usr/share/bash-completion/completions/chown
-source /usr/share/bash-completion/completions/nmcli
-source /usr/share/bash-completion/completions/rsync
+# source /usr/share/bash-completion/completions/chown
+# source /usr/share/bash-completion/completions/nmcli
+# source /usr/share/bash-completion/completions/rsync
+source /usr/share/bash-completion/completions/man
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
@@ -145,7 +145,14 @@ export REACT_EDITOR=code-oss
 export $BROWSER=firefox
 export EDITOR=vim
 export PAGER=less
-export HISTFILESIZE=1000
+export HISTFILESIZE=10000
+# # setting unlimited history size
+# export HISTFILESIZE=
+# export HISTSIZE=
+export HISTTIMEFORMAT="%F %T "
+# export HISTFILE=~/.bash_eternal_history
+export PROMPT_COMMAND="history -a; history -n" # to sync histories across terminals
+
 export NEXT_TELEMETRY_DISABLED=1 # Disable telemetry for nextJs apps
 export CHROME_EXECUTABLE=/usr/bin/chromium
 
@@ -236,7 +243,8 @@ alias gc='git clone'
 alias ccode='code . && exit'
 alias p8='ping 8.8.8.8'
 alias sv='sdcv --use-dict "Oxford Advanced Learner'\''s Dictionary"' # for minimal dictionary searches
-alias msql="mycli -u root"
+# alias msql="mycli -u root"
+alias msql="mycli -u aldrin"
 alias lpdf="libreoffice --convert-to pdf"
 # alias neovim='nvim'
 alias slf='stripe listen --forward-to localhost:3000/api/stripe/stripe-hooks'
@@ -253,7 +261,6 @@ alias fs="fs.sh" # search all custom scripts and open them with vim
 alias f="fuck"
 alias rm="rmtrash"
 alias rmdir="rmdirtrash"
-export PROMPT_COMMAND="history -a; history -n" # to sync histories across terminals
 alias musicdl="mpsyt"
 alias ncp="ncmpcpp"
 alias npc="ncmpcpp"
@@ -265,6 +272,7 @@ alias muttrc="vim ~/.muttrc"
 alias wl="ls -l | wc -l"
 alias disableNine="xmodmap -e 'keycode 18='"
 alias jupiterStart="jupyter-notebook /home/aldrin/code/learn/fastbook"
+alias "..."="cd ../../"
 # alias jpgToJpeg = "mogrify -auto-orient -format jpeg *.jpg && rm *.jpg"
 
 
