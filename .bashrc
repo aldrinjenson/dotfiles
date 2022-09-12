@@ -208,12 +208,10 @@ alias vimrc='vim ~/.SpaceVim.d/autoload/myspacevim.vim'
 alias scpy='scrcpy -S -w'
 alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
 alias ccat='highlight -O ansi --force' # alternative to cat with highlight
-alias ggpush='git push'
-alias gush='git push origin'
-alias ggpull='git pull'
 alias n='nnn -e'
 alias code='code-oss'
 # alias r='ranger'
+alias vim="lvim"
 alias v='nvim'
 alias vim='nvim'
 alias s='cd ~/.scripts && l '
@@ -221,17 +219,22 @@ alias cl='cd ~/clg-stuff && nnn -e .'
 alias i3config='vim ~/.config/i3/config'
 
 # git commands
+alias ggpush='git push'
+alias gush='git push origin'
+alias ggpull='git pull'
+alias gull='git pull'
 alias glog='git log'
 alias gcl='git clone'
 alias ghs='gs'
 alias gs='git status'
+alias gaa='git add -A'
 
 alias c="cd ~/code && l"
 alias startdocker='sudo systemctl start docker.service'
 alias z='zathura'
 alias sx='sxiv'
 alias kpr='kjv Proverbs'
-alias hs='firefox --new-tab http://localhost:1313/ & hugo server -D'
+alias hs='firefox --new-tab http://localhost:1313/ & hugo server -D --disableFastRender'
 alias d="cd ~/.dotfiles && ls -a"
 alias ':q'="exit"
 alias undo='git reset --soft HEAD~1 && echo "Undid latest commit"'
@@ -253,7 +256,7 @@ alias gsoc='cd ~/temp/gsoc && ( firefox "http://localhost:5000/" & npm run start
 alias pomodoro='pomodoro.sh'
 alias lv='lvim'
 alias x='xdg-open'
-# alias v='lvim'
+alias v='lvim'
 alias flc="flutter create" # add folder_path as the next argument
 alias cp="cp -v"
 alias fs="fs.sh" # search all custom scripts and open them with vim
@@ -282,3 +285,8 @@ alias "..."="cd ../../"
 
 # proverbQuote.sh # generate a proverb Quote on new shell open
 echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
+
+alias sch="saveCommandToHistory.sh"
+alias vim="lvim"
+alias phone="mirrorPhone.sh || scrcpy -S -w"
+alias termuxconnect="ssh -p 8022 u0_a215@" # add ip

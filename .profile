@@ -1,6 +1,7 @@
 export TERMINFO=/usr/share/terminfo
 export PATH=$PATH:/home/aldrin/.scripts
 export PATH=$PATH:/home/aldrin/.scripts/da
+export PATH=$PATH:/home/aldrin/.scripts/phonesync
 export PATH=$PATH:/home/aldrin/.scripts/polybar-scripts/
 # export PATH=$PATH:/home/aldrin/.local/bin/
 # export PATH=$PATH:/usr/local/bin/
