@@ -51,15 +51,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 font-0 = DejaVuSans:pixelsize=14;1
-# font-0 = "Noto Sans Regular":style=Regular
 font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
-# font-2 = siji:pixelsize=10;1
-font-2 = "Wuncon Siji:pixelsize=10;1"
+font-2 = siji:pixelsize=10;1
+; font-2 = "Wuncon Siji:pixelsize=10;1"
 
 modules-left = i3 xwindow
 ; modules-left = bspwm i3
 modules-center = mpd
-modules-right = timer battery battery2 filesystem xbacklight pulseaudio memory cpu temperature nmutt wlan date
+modules-right = timer battery battery2 xbacklight pulseaudio memory cpu temperature nmutt wlan date
 ; modules-right =filesystem xbacklight pulseaudio memory cpu temperature timer nmutt wlan date
 
 tray-position = right
@@ -113,7 +112,8 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+; label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %mountpoint%: %percentage_free%% free of %total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -180,6 +180,7 @@ label-urgent-padding = 2
 [module/mpd]
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+; format-online =  <icon-prev> <icon-stop> <toggle> <icon-next>
 
 icon-prev = 
 icon-stop = 
@@ -243,14 +244,11 @@ interface = wlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
 format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected =
-; format-disconnected = <label-disconnected>
-; format-disconnected-underline = ${self.format-connected-underline}
-; label-disconnected = %ifname% disconnected
-; label-disconnected-foreground = ${colors.foreground-alt}
+label-connected = %netspeed% %essid%
+# default is in kb p/s
+speed-unit = 
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -286,7 +284,7 @@ type = internal/date
 interval = 5
 
 ; date =
-date = " %d-%m-%Y"
+date = "%a %d-%m"
 date-alt = " %d-%m-%Y"
 
 time = %I:%M %p
@@ -364,28 +362,22 @@ type = internal/battery
 battery = BAT1
 adapter = AC
 full-at = 98
-
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
-
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
-
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
-
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
-
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
-
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
@@ -396,16 +388,13 @@ animation-discharging-framerate = 750
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
-
 format = <ramp> <label>
 format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
-
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
-
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 

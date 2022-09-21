@@ -105,6 +105,7 @@ UpdateAllPackages() {
 
 PS1="\[\e[31m\]\W\[\033[32m\] \$: " # colors for bash info at the beginning
 shopt -s autocd                     # Allows you to cd into a directory by just entering it's name
+shopt -s histappend 
 
 function gc() {
   gcc "$1" -o ~/temp/c_output && ~/temp/c_output
@@ -244,13 +245,13 @@ alias sql='sudo mysql -u root -p'
 alias gcm='git commit -m'
 alias gc='git clone'
 alias ccode='code . && exit'
-alias p8='ping 8.8.8.8'
+alias p8='ping gnu.org'
 alias sv='sdcv --use-dict "Oxford Advanced Learner'\''s Dictionary"' # for minimal dictionary searches
 # alias msql="mycli -u root"
 alias msql="mycli -u aldrin"
 alias lpdf="libreoffice --convert-to pdf"
 # alias neovim='nvim'
-alias slf='stripe listen --forward-to localhost:3000/api/stripe/stripe-hooks'
+# alias slf='stripe listen --forward-to localhost:3000/api/stripe/stripe-hooks'
 alias conky='conky -c ~/.config/conky/.conkyrc'
 alias gsoc='cd ~/temp/gsoc && ( firefox "http://localhost:5000/" & npm run start & )'
 alias pomodoro='pomodoro.sh'
@@ -262,7 +263,8 @@ alias cp="cp -v"
 alias fs="fs.sh" # search all custom scripts and open them with vim
 
 alias f="fuck"
-alias rm="rmtrash"
+alias rmr="rm" # use normal rm with rmr
+alias rm="rmtrash" # to delete to trash instead of permanenet deletion with rm
 alias rmdir="rmdirtrash"
 alias musicdl="mpsyt"
 alias ncp="ncmpcpp"
@@ -278,7 +280,6 @@ alias jupiterStart="jupyter-notebook /home/aldrin/code/learn/fastbook"
 alias "..."="cd ../../"
 # alias jpgToJpeg = "mogrify -auto-orient -format jpeg *.jpg && rm *.jpg"
 
-
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 
 # source /usr/share/nvm/init-nvm.sh
@@ -289,4 +290,8 @@ echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor an
 alias sch="saveCommandToHistory.sh"
 alias vim="lvim"
 alias phone="mirrorPhone.sh || scrcpy -S -w"
-alias termuxconnect="ssh -p 8022 u0_a215@" # add ip
+alias fixmouse="sudo fixMouse.sh"
+alias fixwifi="sudo fixWifi.sh"
+alias sourcebash="source ~/.bashrc"
+set -o vi
+alias fixkeyboard="setxkbmap -layout us -variant ,qwerty"
