@@ -179,7 +179,7 @@ export NNN_PLUG='p:preview-tabbed;f:finder;d:/home/aldrin/.scripts/drag.sh;x:!ch
 
 # export NNN_PLUG='f:finder;d:/home/aldrin/.scripts/drag.sh;x:!chmod +x;g:!git log;w:~/.scripts/wall.sh;'
 
-# export FLASK_DEBUG=1
+export FLASK_DEBUG=1
 #~/.scripts/meaningDict.sh
 # WINE=${WINE:-wine} WINEPREFIX=${WINEPREFIX:-$HOME/.wine} $WINE regedit /tmp/fontsmoothing 2> /dev/null
 
@@ -278,12 +278,9 @@ alias wl="ls -l | wc -l"
 alias disableNine="xmodmap -e 'keycode 18='"
 alias jupiterStart="jupyter-notebook /home/aldrin/code/learn/fastbook"
 alias "..."="cd ../../"
-# alias jpgToJpeg = "mogrify -auto-orient -format jpeg *.jpg && rm *.jpg"
-
-# [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
-
+# alias jpgToJpeg = "mogrify -auto-orient -format jpeg *.jpg && rm *.jpg" # for ML/DA
+[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 # source /usr/share/nvm/init-nvm.sh
-
 # proverbQuote.sh # generate a proverb Quote on new shell open
 echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
 
@@ -294,4 +291,12 @@ alias fixmouse="sudo fixMouse.sh"
 alias fixwifi="sudo fixWifi.sh"
 alias sourcebash="source ~/.bashrc"
 set -o vi
-alias fixkeyboard="setxkbmap -layout us -variant ,qwerty"
+# alias fixkeyboard="setxkbmap -layout us -variant ,qwerty"
+alias startpixel="emulator -avd Resizable_API_33"
+alias vi="vim"
+alias flaskstart="flask --app app.py --debug run"
+alias connectHDMI="xrandr --output HDMI2 --mode 1920x1080 --rate 60"
+alias sharescreen="xrandr --output HDMI2 --mode 1920x1080 --rate 60"
+alias dox="cd ~/Documents"
+alias lsf='xdg-open "$(ls | fzf)"'
+alias fd="find . -iname"

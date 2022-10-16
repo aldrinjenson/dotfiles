@@ -8,3 +8,14 @@
 ; The global gitignore file
 [core]
 	excludesFile = ~/.globalGitIgnore
+[pull]
+	rebase = true
+[http]
+	postBuffer = 157286400
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[credential]
+	helper = store
