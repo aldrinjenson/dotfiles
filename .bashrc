@@ -300,3 +300,8 @@ alias sharescreen="xrandr --output HDMI2 --mode 1920x1080 --rate 60"
 alias dox="cd ~/Documents"
 alias lsf='xdg-open "$(ls | fzf)"'
 alias fd="find . -iname"
+alias locate="locate -i"
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+alias fixrapoo="xinput --set-prop 19 'libinput Natural Scrolling Enabled' 0"
+
