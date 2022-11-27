@@ -188,7 +188,7 @@ export FLASK_DEBUG=1
 alias ls='lsd'
 # alias l='ls -lav --ignore=.?*' # show long listing but no hidden dotfiles except "."
 # alias grep='grep --line-number --with-filename --color=auto'
-alias grep='rg'
+alias grep='rg -i'
 alias tree='lsd --tree'
 # alias ll='ls -lav --ignore=..' # show long listing of all except ".."
 alias ll='lsd -lav --ignore-glob=..' # show long listing of all except ".."
@@ -266,7 +266,8 @@ alias f="fuck"
 alias rmr="rm" # use normal rm with rmr
 alias rm="rmtrash" # to delete to trash instead of permanenet deletion with rm
 alias rmdir="rmdirtrash"
-alias musicdl="mpsyt"
+# alias musicdl="mpsyt"
+alias musicdl="yt"
 alias ncp="ncmpcpp"
 alias npc="ncmpcpp"
 alias graph='git log --all --decorate --oneline --graph'
@@ -279,8 +280,7 @@ alias disableNine="xmodmap -e 'keycode 18='"
 alias jupiterStart="jupyter-notebook /home/aldrin/code/learn/fastbook"
 alias "..."="cd ../../"
 # alias jpgToJpeg = "mogrify -auto-orient -format jpeg *.jpg && rm *.jpg" # for ML/DA
-[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
-# source /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh
 # proverbQuote.sh # generate a proverb Quote on new shell open
 echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
 
@@ -301,7 +301,9 @@ alias dox="cd ~/Documents"
 alias lsf='xdg-open "$(ls | fzf)"'
 alias fd="find . -iname"
 alias locate="locate -i"
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
+# bind 'set show-all-if-ambiguous on'
+# bind 'TAB:menu-complete'
 alias fixrapoo="xinput --set-prop 19 'libinput Natural Scrolling Enabled' 0"
-
+alias compress="ffmpeg -i Demo.mp4 -vcodec libx265 -crf 28 output.mp4"
+# [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+alias docker="sudo docker"

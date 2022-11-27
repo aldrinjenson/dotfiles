@@ -245,7 +245,7 @@ mode "move" {
 }
 
 
-exec --no-startup-id python /home/aldrin/.scripts/temp/batteryChecker.py & # change this to a custom polybar script
+# exec --no-startup-id python /home/aldrin/.scripts/temp/batteryChecker.py & # change this to a custom polybar script
 
 # keybindings: | use xev command to get the keycode or keysms
 bindsym Print exec --no-startup-id xfce4-screenshooter -rc # printscreen for taking screenshots of a region
