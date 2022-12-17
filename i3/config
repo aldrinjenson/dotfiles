@@ -254,6 +254,7 @@ bindsym shift+Print exec --no-startup-id xfce4-screenshooter -r # printscreen fo
 # exec --no-startup-id picom -CGb
 # exec --no-startup-id picom -b
 bindsym $mod+shift+p exec --no-startup-id emojipicker.sh
+bindsym $mod+p exec --no-startup-id arandr
 bindsym $mod+shift+Escape exec --no-startup-id xfce4-taskmanager # open task manager
 bindsym $mod+shift_L+KP_Add exec --no-startup-id brightnessctl 10%+
 bindsym $mod+shift_L+KP_Subtract exec --no-startup-id brightnessctl 10%-

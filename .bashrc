@@ -110,15 +110,15 @@ shopt -s histappend
 function gc() {
   gcc "$1" -o ~/temp/c_output && ~/temp/c_output
 }
-source /usr/share/bash-completion/completions/git
+# source /usr/share/bash-completion/completions/git
 # source /usr/share/bash-completion/completions/chown
 # source /usr/share/bash-completion/completions/nmcli
 # source /usr/share/bash-completion/completions/rsync
-source /usr/share/bash-completion/completions/man
+# source /usr/share/bash-completion/completions/man
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # set -o vi                #vi mode in bash
 bind -x '"\C-l": clear;' # ctrl+l to clear tty
@@ -280,9 +280,8 @@ alias disableNine="xmodmap -e 'keycode 18='"
 alias jupiterStart="jupyter-notebook /home/aldrin/code/learn/fastbook"
 alias "..."="cd ../../"
 # alias jpgToJpeg = "mogrify -auto-orient -format jpeg *.jpg && rm *.jpg" # for ML/DA
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 # proverbQuote.sh # generate a proverb Quote on new shell open
-echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
 
 alias sch="saveCommandToHistory.sh"
 alias vim="lvim"
@@ -304,6 +303,11 @@ alias locate="locate -i"
 # bind 'set show-all-if-ambiguous on'
 # bind 'TAB:menu-complete'
 alias fixrapoo="xinput --set-prop 19 'libinput Natural Scrolling Enabled' 0"
-alias compress="ffmpeg -i Demo.mp4 -vcodec libx265 -crf 28 output.mp4"
+alias compressVidoe="ffmpeg -i Demo.mp4 -vcodec libx265 -crf 28 output.mp4"
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 alias docker="sudo docker"
+alias shpie='ssh pi@100.107.113.33'
+
+echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
+alias ec2ip="firefox http://3.109.122.203"
+alias :wq="exit"
