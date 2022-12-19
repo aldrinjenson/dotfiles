@@ -212,7 +212,7 @@ alias locate="locate -i"
 # bind 'set show-all-if-ambiguous on'
 # bind 'TAB:menu-complete'
 alias fixrapoo="xinput --set-prop 19 'libinput Natural Scrolling Enabled' 0"
-alias compressVidoe="ffmpeg -i Demo.mp4 -vcodec libx265 -crf 28 output.mp4"
+alias compressVideo="ffmpeg -i Demo.mp4 -vcodec libx265 -crf 28 output.mp4"
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 alias docker="sudo docker"
 alias shpie='ssh pi@100.107.113.33'
@@ -220,3 +220,4 @@ alias shpie='ssh pi@100.107.113.33'
 echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
 alias ec2ip="firefox http://3.109.122.203"
 alias :wq="exit"
+alias compersImg="optipng"
