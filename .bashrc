@@ -106,7 +106,7 @@ alias l='ls'
 #alias ls='ls --color=auto -F'
 # alias l='ls --color=auto -F'
 alias t="tldr"
-alias ns="npm start"
+alias ns="npm start || npx react-scripts start"
 alias nd="npm run dev"
 alias na="npm run android"
 alias p="sudo pacman"
