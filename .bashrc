@@ -221,3 +221,4 @@ echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor an
 alias ec2ip="firefox http://3.109.122.203"
 alias :wq="exit"
 alias compersImg="optipng"
+alias whatIsMyPublicIp="curl ipinfo.io/ip"
