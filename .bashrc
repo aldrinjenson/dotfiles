@@ -181,7 +181,6 @@ alias ncp="ncmpcpp"
 alias npc="ncmpcpp"
 alias graph='git log --all --decorate --oneline --graph'
 alias conflict='git diff --name-only --diff-filter=U'
-alias cw="cd ~/code/work && ls"
 alias b="cd ~/code/my-blog && ls"
 alias muttrc="vim ~/.muttrc"
 alias wl="ls -l | wc -l"
@@ -223,3 +222,5 @@ alias :wq="exit"
 alias compersImg="optipng"
 alias whatIsMyPublicIp="curl ipinfo.io/ip"
 alias ce="cd ~/code/learn/ethical-stuff && ls"
+alias cw="cd ~/code/work && ls"
+alias ci="cd ~/code/work/iedc && ls"
