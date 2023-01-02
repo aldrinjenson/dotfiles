@@ -216,7 +216,7 @@ alias compressVideo="ffmpeg -i Demo.mp4 -vcodec libx265 -crf 28 output.mp4"
 alias docker="sudo docker"
 alias shpie='ssh pi@100.107.113.33'
 
-echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
+# echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
 alias ec2ip="firefox http://3.109.122.203"
 alias :wq="exit"
 alias compersImg="optipng"
