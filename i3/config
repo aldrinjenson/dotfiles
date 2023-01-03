@@ -248,7 +248,7 @@ mode "move" {
 
 
 # exec --no-startup-id python /home/aldrin/.scripts/temp/batteryChecker.py & # change this to a custom polybar script
-exec --no-startup-id /home/aldrin/.scripts/i3-battery-popup.sh -s ~/Music/"Queen – Bohemian Rhapsody (Lyrics).mp3" -v 100
+exec --no-startup-id /home/aldrin/.scripts/i3-battery-popup.sh -s ~/Music/"Queen – Bohemian Rhapsody (Lyrics).mp3" -v 100 -n
 
 # keybindings: | use xev command to get the keycode or keysms
 bindsym Print exec --no-startup-id xfce4-screenshooter -rc # printscreen for taking screenshots of a region
