@@ -211,7 +211,7 @@ for_window [class="^.*"] border pixel 7
 
 
 exec --no-startup-id polybar example
-exec --no-startup-id dunst & 
+# exec --no-startup-id dunst & 
 exec --no-startup-id nm-applet
 exec --no-startup-id /home/aldrin/.scripts/swapcaps.sh # mapping capslock to escape
 exec --no-startup-id safeeyes # start safeeyes on first i3 boot
@@ -219,9 +219,10 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id /home/aldrin/.scripts/checkPowerOff.sh  # shutdown system if the time is b/w 12 am to 6 am as soon as the pc is powered on
 # exec --no-startup-id /home/aldrin/.scripts/proverbbg.sh || /home/aldrin/.scripts/randombg.sh # set proverb as wallpaper
 # exec --no-startup-id  xwallpaper --zoom /home/aj/personal/kali-wall.png
+exec --no-startup-id  xwallpaper --center ~/.config/wallpapers/wallpaper.jpg
 
 exec --no-startup-id libinput-gestures
-exec --no-startup-id xinput set-prop 16  "libinput Tapping Enabled" 1
+# exec --no-startup-id xinput set-prop 16  "libinput Tapping Enabled" 1
 
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! custom
@@ -252,7 +253,7 @@ mode "move" {
 
 # exec --no-startup-id python /home/aldrin/.scripts/temp/batteryChecker.py & # change this to a custom polybar script
 exec --no-startup-id /home/aldrin/.scripts/i3-battery-popup.sh -s ~/Music/"Queen – Bohemian Rhapsody (Lyrics).mp3" -v 100 -n
-exec --no-startup-id setxkbmap -option caps:escape
+# exec --no-startup-id setxkbmap -option caps:escape
 
 # keybindings: | use xev command to get the keycode or keysms
 bindsym Print exec --no-startup-id xfce4-screenshooter -rc # printscreen for taking screenshots of a region
