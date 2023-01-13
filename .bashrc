@@ -226,3 +226,6 @@ alias cw="cd ~/code/work && ls"
 alias ci="cd ~/code/work/iedc && ls"
 echo "You can do better than laze around!"
 alias evillimiter="sudo evillimiter"
+alias systemctl="sudo systemctl"
+
+export PATH="/home/aldrin/.deta/bin:$PATH"
