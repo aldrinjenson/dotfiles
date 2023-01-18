@@ -224,7 +224,7 @@ alias whatIsMyPublicIp="curl ipinfo.io/ip"
 alias ce="cd ~/code/learn/ethical-stuff && ls"
 alias cw="cd ~/code/work && ls"
 alias ci="cd ~/code/work/iedc && ls"
-echo "You can do better than laze around!"
+# echo "You can do better than laze around!"
 alias evillimiter="sudo evillimiter"
 alias systemctl="sudo systemctl"
 
