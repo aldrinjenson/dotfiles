@@ -230,3 +230,5 @@ alias systemctl="sudo systemctl"
 alias whatismyip="ip addr | awk '/192./ {print $2}' | cut -d'/' -f1-"
 
 export PATH="/home/aldrin/.deta/bin:$PATH"
+# alias shank="ssh -X hank@hank.hopto.org -T '/usr/local/bin/ddns_update.sh'"
+alias shank="ssh -X hank@hank.hopto.org"
