@@ -33,9 +33,9 @@ export NVM_DIR="$HOME/.nvm"
 bind -x '"\C-l": clear;' # ctrl+l to clear tty
 
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
-# export ANDROID_HOME=/home/aldrin/Android/Sdk
-# export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export ANDROID_HOME=$HOME/softwares/Android/Sdk
+export ANDROID_HOME=/home/aldrin/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
@@ -43,6 +43,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/build-tools/
 export PATH=$PATH:$ANDROID_HOME/build-tools/31.0.0
 export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.0
+export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.1
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 # export PATH=$HOME/.local/lib/python3.10/site-packages:$PATH
