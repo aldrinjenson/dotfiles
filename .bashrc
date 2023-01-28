@@ -35,7 +35,7 @@ bind -x '"\C-l": clear;' # ctrl+l to clear tty
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
 # export ANDROID_HOME=/home/aldrin/Android/Sdk
 # export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_HOME=$HOME/softwares/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
@@ -121,7 +121,7 @@ alias scpy='scrcpy -S -w'
 alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
 alias ccat='highlight -O ansi --force' # alternative to cat with highlight
 alias n='nnn -e'
-alias code='code-oss'
+alias code='code-oss --enable-proposed-api ms-python.python'
 # alias r='ranger'
 alias vim="lvim"
 alias v='nvim'
