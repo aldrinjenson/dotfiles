@@ -222,7 +222,7 @@ alias shpie='ssh pi@100.107.113.33'
 # echo "Proverbs 22:4 True Humility and Fear of the Lord, lead to Riches, Honor and Long Life"
 alias ec2ip="firefox http://3.109.122.203"
 alias :wq="exit"
-alias compersImg="optipng"
+alias compressImg="optipng"
 alias whatismypublicip="curl ipinfo.io/ip"
 alias ce="cd ~/code/learn/ethical-stuff && ls"
 alias cw="cd ~/code/work && ls"
