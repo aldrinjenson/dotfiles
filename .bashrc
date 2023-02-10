@@ -32,18 +32,21 @@ export NVM_DIR="$HOME/.nvm"
 # set -o vi                #vi mode in bash
 bind -x '"\C-l": clear;' # ctrl+l to clear tty
 
+#Android Studio
+
 # note that these exports will be considered only when loading bash shell. If you want to add or change exports to reflect in i3 dmenu or something, add them in ~/.profile
 export ANDROID_HOME=/home/aldrin/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/build-tools/
-export PATH=$PATH:$ANDROID_HOME/build-tools/31.0.0
-export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.0
-export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.1
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$ANDROID_HOME/build-tools/
+# export PATH=$PATH:$ANDROID_HOME/build-tools/31.0.0
+# export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.1
+
+
+
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 # export PATH=$HOME/.local/lib/python3.10/site-packages:$PATH
@@ -213,7 +216,7 @@ alias fd="find . -iname"
 alias locate="locate -i"
 # bind 'set show-all-if-ambiguous on'
 # bind 'TAB:menu-complete'
-alias fixrapoo="xinput --set-prop 19 'libinput Natural Scrolling Enabled' 0"
+# alias fixrapoo="xinput --set-prop 19 'libinput Natural Scrolling Enabled' 0"
 alias compressVideo="ffmpeg -i Demo.mp4 -vcodec libx265 -crf 28 output.mp4"
 # [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 alias docker="sudo docker"
