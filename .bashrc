@@ -240,3 +240,4 @@ export PATH="/home/aldrin/.deta/bin:$PATH"
 alias shank="ssh -X hank@hank.hopto.org"
 alias wip=whatismyip
 alias compile="node ~/code/workspace/masterscript-dev/compiler.js"
+alias flr="flutter run --watch"
