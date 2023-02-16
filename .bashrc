@@ -241,3 +241,4 @@ alias shank="ssh -X hank@hank.hopto.org"
 alias wip=whatismyip
 alias compile="node ~/code/workspace/masterscript-dev/compiler.js"
 alias flr="flutter run --watch"
+alias flaskrun="flask run --host=0.0.0.0"
