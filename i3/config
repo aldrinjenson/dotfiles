@@ -100,7 +100,8 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Set Chromium to float by default
-for_window [class="Chromium"] floating enable
+for_window [title=".*Chromium.*"] floating enable
+
 
 
 # toggle tiling / floating
