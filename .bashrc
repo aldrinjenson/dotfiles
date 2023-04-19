@@ -247,3 +247,4 @@ alias flaskrun="flask run --host=0.0.0.0" # to run across the whole network
 alias sherlock='python3 ~/code/learn/ethical-stuff/sherlock/sherlock/sherlock.py'
 alias hugonew="hugo new"
 alias cal="cal -3"
+alias tuxguitar="flatpak run ar.com.tuxguitar.TuxGuitar"
