@@ -248,3 +248,4 @@ alias sherlock='python3 ~/code/learn/ethical-stuff/sherlock/sherlock/sherlock.py
 alias hugonew="hugo new"
 alias cal="cal -3"
 alias tuxguitar="flatpak run ar.com.tuxguitar.TuxGuitar"
+alias createnextapp="npx create-next-app@latest"
