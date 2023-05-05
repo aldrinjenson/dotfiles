@@ -57,8 +57,8 @@ font-2 = siji:pixelsize=10;1
 modules-left = i3 xwindow
 ; modules-left = bspwm i3
 ; modules-center = mpd # don't do this unless you are enabling mpd in systemctl. else it just adds a long log of mpd not connection refused into the disk
-modules-center = obsidian
-modules-right = timer battery battery2 xbacklight pulseaudio memory cpu wlan date obsidian
+modules-center = mpd
+modules-right = timer battery battery2 xbacklight pulseaudio memory cpu wlan date 
 ; modules-right =filesystem xbacklight pulseaudio memory cpu temperature timer nmutt wlan date
 
 tray-position = right
@@ -188,7 +188,10 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+# label-song = %artist% - %title%
+;format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+format-online = <title> <label-song> <icon-prev> <icon-stop> <toggle> <icon-next>
+label-song = %title% - %artist%
 ; format-online =  <icon-prev> <icon-stop> <toggle> <icon-next>
 
 icon-prev = 
@@ -197,7 +200,7 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 25
+label-song-maxlen = 30
 label-song-ellipsis = true
 
 [module/xbacklight]
@@ -206,7 +209,7 @@ type = internal/xbacklight
 format = <label> <bar>
 label = BL
 
-bar-width = 10
+bar-width = 5
 bar-indicator = |
 bar-indicator-foreground = #fff
 bar-indicator-font = 2
@@ -315,7 +318,7 @@ label-volume-foreground = ${root.foreground}
 label-muted = 🔇 muted
 label-muted-foreground = #666
 
-bar-volume-width = 10
+bar-volume-width = 5
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -325,11 +328,11 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 1
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 1
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 ; [module/alsa]
