@@ -253,4 +253,5 @@ alias createnextapp="npx create-next-app@latest"
 alias sudovim="sudo vim"
 alias getlyris="lyrics -t"
 alias mv="mv -v"
-alias whisper="whisper --model base.en"
+alias whisper="whisper --model base.en --output_format txt --task transcribe"
+
