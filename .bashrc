@@ -254,4 +254,4 @@ alias sudovim="sudo vim"
 alias getlyris="lyrics -t"
 alias mv="mv -v"
 alias whisper="whisper --model base.en --output_format txt --task transcribe"
-
+alias fastapirun="uvicorn main:app --reload"
