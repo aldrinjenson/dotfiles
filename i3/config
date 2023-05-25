@@ -257,7 +257,7 @@ mode "move" {
 
 
 # exec --no-startup-id python /home/aldrin/.scripts/temp/batteryChecker.py & # change this to a custom polybar script
-exec --no-startup-id /home/aldrin/.scripts/i3-battery-popup.sh -s /home/aldrin/.dotfiles/beepSound.wav -v 100 -n
+# exec --no-startup-id /home/aldrin/.scripts/i3-battery-popup.sh -s /home/aldrin/.dotfiles/beepSound.wav -v 100 -n
 # exec --no-startup-id setxkbmap -option caps:escape
 
 # keybindings: | use xev command to get the keycode or keysms
