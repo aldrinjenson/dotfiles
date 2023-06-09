@@ -229,7 +229,7 @@ exec --no-startup-id /home/aldrin/.scripts/checkPowerOff.sh  # shutdown system i
 exec --no-startup-id  xwallpaper --center ~/.config/wallpapers/wallpaper.jpg
 
 exec --no-startup-id libinput-gestures
-exec --no-startup-id aw-server
+exec --no-startup-id aw-qt
 # exec --no-startup-id xinput set-prop 16  "libinput Tapping Enabled" 1
 
 
