@@ -296,8 +296,8 @@ type = internal/date
 interval = 5
 
 ; date =
-date = "%a %d-%m"
-date-alt = " %d-%m-%Y"
+date = "%a %d-%m-%Y"
+; date-alt = " %d-%m-%Y"
 
 time = %I:%M %p
 time-alt = %I:%M %p
@@ -306,7 +306,7 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date% %time%
+label = %date% | %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
