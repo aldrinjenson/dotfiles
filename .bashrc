@@ -56,7 +56,7 @@ export PATH=$HOME/misc/flutter/bin:$PATH
 export PATH=$HOME/code/utils/ai_utilities:$PATH
 
 
-export REACT_EDITOR=code-oss
+export REACT_EDITOR=code
 export $BROWSER=firefox
 export EDITOR=vim
 export PAGER=less
@@ -127,7 +127,8 @@ alias bluetooth='sudo systemctl start bluetooth && blueman-manager'
 alias ccat='highlight -O ansi --force' # alternative to cat with highlight
 alias n='nnn -e'
 # alias code='code-oss --enable-proposed-api'
-alias code='code-oss'
+# alias code='code-oss'
+alias code='vscodium'
 # alias r='ranger'
 alias vim="lvim"
 alias v='nvim'
@@ -263,3 +264,6 @@ alias lh="ls -lh"
 alias sl="ls"
 # alias nsd="sudo systemctl start docker && npm start"
 alias macssh="ssh mec@192.168.4.69"
+alias feh="feh -Zd --draw-exif"
+
+head -n3 todo
