@@ -12,5 +12,5 @@ export PATH=$PATH:/home/aldrin/.scripts/polybar-scripts/
 numlockx on
 # setxkbmap -layout us -variant ,qwerty # set keyboard layout, but doesn't work in tty :(
 loadkeys us # same as above, but works on tty as well
-# setxkbmap -option caps:escape
+setxkbmap -option caps:escape
 # swapcaps.sh # mapping capslock to escape
