@@ -266,4 +266,4 @@ alias sl="ls"
 alias macssh="ssh mec@192.168.4.69"
 alias feh="feh -Zd --draw-exif"
 
-head -n3 todo
+head -n3 ~/todo
