@@ -265,5 +265,7 @@ alias sl="ls"
 # alias nsd="sudo systemctl start docker && npm start"
 alias macssh="ssh mec@192.168.4.69"
 alias feh="feh -Zd --draw-exif"
+alias nb="npm run build"
 
 head -n3 ~/todo
+
