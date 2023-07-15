@@ -49,6 +49,11 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run_mod
+
+# program keybinds - using alt key
+bindsym $alt+f exec --no-startup-id firefox
+bindsym $alt+t exec --no-startup-id thunar
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "dmenu_path | rofi -dmenu -matching prefix| bash"
 # bindcode $mod+40 exec "rofi -combi-modi drun,run -show combi"
