@@ -266,6 +266,5 @@ alias sl="ls"
 alias macssh="ssh mec@192.168.4.69"
 alias feh="feh -Zd --draw-exif"
 alias nb="npm run build"
-
 head -n3 ~/todo
-
+alias createchromeextension="npm run build && zip -r zipped.zip dist/ && drag.sh zipped.zip"
