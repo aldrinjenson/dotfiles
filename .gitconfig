@@ -79,3 +79,5 @@
 	directory = /mnt/5E7AFBC51EC255F2/Code/private-data
 	directory = /mnt/5E7AFBC51EC255F2/Code/temp/mobile-app/1-fleet-a-day
 	directory = /mnt/5E7AFBC51EC255F2/Code/temp/mobile-app/1-fleet-a-day
+[help]
+	autocorrect = 1
