@@ -269,3 +269,4 @@ alias nb="npm run build"
 head -n3 ~/todo
 alias createchromeextension="npm run build && zip -r zipped.zip dist/ && drag.sh zipped.zip"
 alias goPushToProdAndComeBack="git checkout prod && git merge main && git push origin prod && git checkout main"
+alias supabase="sudo supabase"
