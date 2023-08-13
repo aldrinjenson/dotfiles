@@ -267,6 +267,7 @@ alias macssh="ssh mec@192.168.4.69"
 alias feh="feh -Zd --draw-exif"
 alias nb="npm run build"
 head -n3 ~/todo
-alias createchromeextension="npm run build && zip -r zipped.zip dist/ && drag.sh zipped.zip"
+alias createTestchromeextension="npm run buildTest && zip -r zipped.zip dist/ && drag.sh zipped.zip"
+alias createProdchromeextension="npm run buildProd && zip -r zipped.zip dist/ && drag.sh zipped.zip"
 alias goPushToProdAndComeBack="git checkout prod && git merge main && git push origin prod && git checkout main"
 alias supabase="sudo supabase"
