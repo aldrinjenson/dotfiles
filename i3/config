@@ -274,6 +274,7 @@ mode "move" {
 # keybindings: | use xev command to get the keycode or keysms
 bindsym Print exec --no-startup-id xfce4-screenshooter -rc # printscreen for taking screenshots of a region
 bindsym shift+Print exec --no-startup-id xfce4-screenshooter -r # printscreen for taking screenshots of a region
+bindsym shift+Print+f exec --no-startup-id xfce4-screenshooter -f # printscreen for taking screenshots of a region
 # bindsym shift+Print exec --no-startup-id xfce4-screenshooter  # shift + printscreen for opening the gui window
 # exec --no-startup-id picom -CGb
 # exec --no-startup-id picom -b
