@@ -271,3 +271,4 @@ alias createTestchromeextension="npm run buildTest && zip -r zipped.zip dist/ &&
 alias createProdchromeextension="npm run buildProd && zip -r zipped.zip dist/ && drag.sh zipped.zip"
 alias goPushToProdAndComeBack="git checkout prod && git merge main && git push origin prod && git checkout main"
 alias supabase="sudo supabase"
+alias todo="vim ~/todo"
