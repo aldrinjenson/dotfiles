@@ -14,3 +14,4 @@ numlockx on
 loadkeys us # same as above, but works on tty as well
 setxkbmap -option caps:escape
 # swapcaps.sh # mapping capslock to escape
+. "$HOME/.cargo/env"

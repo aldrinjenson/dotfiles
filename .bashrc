@@ -272,3 +272,4 @@ alias createProdchromeextension="npm run buildProd && zip -r zipped.zip dist/ &&
 alias goPushToProdAndComeBack="git checkout prod && git merge main && git push origin prod && git checkout main"
 alias supabase="sudo supabase"
 alias todo="vim ~/todo"
+. "$HOME/.cargo/env"
