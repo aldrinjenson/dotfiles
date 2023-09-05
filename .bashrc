@@ -273,3 +273,6 @@ alias goPushToProdAndComeBack="git checkout prod && git merge main && git push o
 alias supabase="sudo supabase"
 alias todo="vim ~/todo"
 . "$HOME/.cargo/env"
+alias pn=pnpm
+alias np=pnpm
+

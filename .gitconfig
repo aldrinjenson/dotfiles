@@ -81,5 +81,9 @@
 	directory = /mnt/5E7AFBC51EC255F2/Code/temp/mobile-app/1-fleet-a-day
 	directory = /mnt/5E7AFBC51EC255F2/Code/projects/flask-lib-management
 	directory = /mnt/5E7AFBC51EC255F2/Code/work/parseable
+	directory = /mnt/5E7AFBC51EC255F2/Code/work/parseable/server
+	directory = /mnt/5E7AFBC51EC255F2/Code/work/parseable/console
+	directory = /mnt/5E7AFBC51EC255F2/Code/work/parseable/parseable
+	directory = /mnt/5E7AFBC51EC255F2/Code/work/parseable/console
 [help]
 	autocorrect = 1
