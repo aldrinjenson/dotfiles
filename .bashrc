@@ -275,4 +275,5 @@ alias todo="vim ~/todo"
 . "$HOME/.cargo/env"
 alias pn=pnpm
 alias np=pnpm
+alias npd="pnpm run dev"
 
