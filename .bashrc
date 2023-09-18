@@ -276,4 +276,6 @@ alias todo="vim ~/todo"
 alias pn=pnpm
 alias np=pnpm
 alias npd="pnpm run dev"
+export LOCAL_ASSETS_PATH="/mnt/5E7AFBC51EC255F2/Code/work/parseable/console/dist"
+alias pbstart="LOCAL_ASSETS_PATH=/mnt/5E7AFBC51EC255F2/Code/work/parseable/console/dist cargo run local-store"
 
