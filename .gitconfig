@@ -89,5 +89,6 @@
 	directory = /mnt/5E7AFBC51EC255F2/Code/learn/rusto
 	directory = /mnt/5E7AFBC51EC255F2/Code/work/parseable/documentation
 	directory = /mnt/5E7AFBC51EC255F2/Code/work/parseable/anomaly-detection
+	directory = /mnt/5E7AFBC51EC255F2/Code/temp/delete/applywiz-web-v2
 [help]
 	autocorrect = 1
