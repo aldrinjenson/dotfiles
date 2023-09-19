@@ -278,4 +278,4 @@ alias np=pnpm
 alias npd="pnpm run dev"
 export LOCAL_ASSETS_PATH="/mnt/5E7AFBC51EC255F2/Code/work/parseable/console/dist"
 alias pbstart="LOCAL_ASSETS_PATH=/mnt/5E7AFBC51EC255F2/Code/work/parseable/console/dist cargo run local-store"
-
+alias dcomposeup="sudo systemctl start docker ; docker-compose up"
