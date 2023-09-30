@@ -206,7 +206,7 @@ alias phone="mirrorPhone.sh || scrcpy -S -w"
 alias fixmouse="sudo fixMouse.sh"
 alias fixwifi="sudo fixWifi.sh"
 alias sourcebash="source ~/.bashrc"
-set -o vi
+# set -o vi
 # alias fixkeyboard="setxkbmap -layout us -variant ,qwerty"
 alias startpixel="emulator -avd Resizable_API_33"
 alias vi="vim"
