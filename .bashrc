@@ -283,3 +283,4 @@ alias dcomposeup="sudo systemctl start docker ; docker-compose up"
 # Fiberplane CLI (fp)
 export PATH="/home/aldrin/.fiberplane:$PATH"
 source /home/aldrin/.fiberplane/bash_completions
+alias marp="marp --allow-local-files"
