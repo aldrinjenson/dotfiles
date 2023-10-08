@@ -134,7 +134,8 @@ alias vim="lvim"
 alias v='nvim'
 alias vim='nvim'
 alias s='cd ~/.scripts && l '
-alias cl='cd ~/clg-stuff && nnn -e .'
+# alias cl='cd ~/clg-stuff && nnn -e .'
+alias cl='cd ~/code/learn/'
 alias i3config='vim ~/.config/i3/config'
 
 # git commands
