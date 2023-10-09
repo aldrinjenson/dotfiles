@@ -289,3 +289,4 @@ alias marp="marp --allow-local-files"
 export RUSTC_WRAPPER=ccache
 
 alias marphtml="marp -I . --html --allow-local-files"
+alias crl="cargo run local-store"
