@@ -290,3 +290,5 @@ export RUSTC_WRAPPER=ccache
 
 alias marphtml="marp -I . --html --allow-local-files"
 alias crl="cargo run local-store"
+alias open="xdg-open"
+alias zshrc="vim ~/.bashrc"
