@@ -150,7 +150,6 @@ alias gs='git status'
 alias gaa='git add -A'
 
 alias c="cd ~/code && l"
-alias startdocker='sudo systemctl start docker.service'
 alias z='zathura'
 alias sx='sxiv'
 alias kpr='kjv Proverbs'
@@ -293,4 +292,5 @@ alias crl="cargo run local-store"
 alias open="xdg-open"
 alias zshrc="vim ~/.bashrc"
 alias sp="supabase"
+alias startdocker='sudo systemctl start docker.service'
 export SUPABASE_DB_PASSWORD="1RyfTtCyU1qw3MMA"
