@@ -295,3 +295,6 @@ alias sp="supabase"
 alias startdocker='sudo systemctl start docker.service'
 export SUPABASE_DB_PASSWORD=1RyfTtCyU1qw3MMA
 source "/etc/profile.d/google-cloud-cli.sh"
+export VERTEX_PROJECT=project=quick-asset-405417
+export VERTEX_LOCATION=us-central1
+alias litellm="litellm --telemetry False"
