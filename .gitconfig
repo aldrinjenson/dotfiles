@@ -108,5 +108,6 @@
 	directory = /mnt/5E7AFBC51EC255F2/Code/personal/slides
 	directory = /mnt/5E7AFBC51EC255F2/Code/personal/ajent
 	directory = /mnt/5E7AFBC51EC255F2/Code/text2vec-exps
+	directory = /mnt/5E7AFBC51EC255F2/Code/work/seat-alloc
 [help]
 	autocorrect = 1
