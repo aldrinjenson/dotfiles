@@ -266,7 +266,6 @@ alias sl="ls"
 alias macssh="ssh mec@192.168.4.69"
 alias feh="feh -Zd --draw-exif"
 alias nb="npm run build"
-head -n3 ~/todo
 alias createTestchromeextension="npm run buildTest && zip -r zipped.zip dist/ && drag.sh zipped.zip"
 alias createProdchromeextension="npm run buildProd && zip -r zipped.zip dist/ && drag.sh zipped.zip"
 alias goPushToProdAndComeBack="git checkout prod && git merge main && git push origin prod && git checkout main"
@@ -301,3 +300,4 @@ alias litellm="litellm --telemetry False"
 alias slr="streamlit run app.py"
 alias venvactivate="source .venv/bin/activate"
 
+# head -n3 ~/todo
